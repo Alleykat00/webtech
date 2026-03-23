@@ -1,3 +1,47 @@
+/* 1. GLOBAL STYLES */
 body {
-    background-color: azure;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* 2. HEADINGS */
+h1 {
+    color: #2c3e50;
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 10px;
+}
+
+/* 3. NAVIGATION CONTAINER */
+nav {
+    margin-top: 20px;
+    background: #cbc7c7;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* 4. LIST STYLES */
+nav ul {
+    list-style-type: none; /* Removes the bullet points */
+    padding: 0;
+}
+
+nav li {
+    margin-bottom: 10px;
+}
+
+/* 5. LINK STYLES */
+nav a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #2980b9;
+    text-decoration: underline;
 }
