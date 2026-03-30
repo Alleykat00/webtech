@@ -18,16 +18,8 @@ img {
 .container {
   max-width: 960px;
   width: 80vw;
-  margin: 40px auto;
-  text-align: center; /* Centers text and inline elements */
-}
-
-.img-center {
-  display: block;
-  margin: 20px auto;
-  border: 1px solid #d4af37;
-  padding: 10px;
-  max-width: 33%;
+  margin: 0 auto; 
+  text-align: center; /* Centers text and nested blocks */
 }
 
 /* Skip link utility */
@@ -47,6 +39,8 @@ img {
   background: #d4af37;
   color: #0d1a12;
   padding: 10px;
+  display: block;
+  margin: 0 auto;
 }
 
 /* ------------------ Global Styles --------------------- */
@@ -54,49 +48,56 @@ img {
 body {
   font-family: "Rubik", sans-serif;
   margin: 0;
-  background-color: #f4f7f4;
+  background-color: #f4f7f4; /* Light Mint Tint */
   color: #2c3e50;
-  text-align: center; /* Global centering */
+  line-height: 1.8;
+  text-align: center; /* Ensures global centering */
 }
 
 header.primary {
-  background-color: #0d1a12;
+  background-color: #0d1a12; /* Midnight Forest */
   color: #ffffff;
   padding: 60px 20px;
   border-bottom: 4px solid #d4af37;
   background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d4af37' fill-opacity='0.05'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/svg%3E");
 }
 
-/* Building the Modern Web - Gold Fix */
-header.primary h1 {
-  font-size: 2.4rem;
+/* Building the Modern Web - Gold Style */
+header.primary h1 a {
+  font-size: 2.8rem;
   margin: 0;
   color: #d4af37;
+  text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+  font-weight: 900;
 }
 
 header.primary p.subtitle {
-  font-size: 1.3rem;
-  margin: 10px 0 20px;
+  font-size: 1.2rem;
+  margin: 10px 0 30px;
   color: #fdfdfd;
+  opacity: 0.9;
 }
 
+/* --- Navigation --- */
 nav.primary ul {
   padding: 0;
   display: flex;
   justify-content: center;
   gap: 20px;
   list-style: none;
+  margin: 0 auto;
 }
 
 nav.primary ul li a {
   background-color: rgba(212, 175, 55, 0.1);
-  padding: 8px 15px;
+  padding: 8px 20px;
   border: 1px solid #d4af37;
-  border-radius: 8px;
+  border-radius: 4px;
   color: #d4af37;
   text-decoration: none;
+  font-weight: bold;
   transition: .3s;
 }
 
@@ -105,54 +106,57 @@ nav.primary ul li a:hover {
    color: #0d1a12;
 }
 
-#content h2, #practice h2 {
-  color: #2d5a27;
-  border-bottom: 1px dashed #d4af37;
+/* --- Content Sections --- */
+#content h2, #practice h2, #recent-posts {
+  color: #2d5a27; /* Forest Green */
+  border-bottom: 2px solid #d4af37;
   display: inline-block;
-  margin-top: 40px;
+  padding-bottom: 5px;
+  margin-top: 50px;
+  text-transform: uppercase;
 }
 
-#content p {
-  line-height: 1.6;
-  max-width: 700px;
+#content p, #practice p {
+  max-width: 750px;
   margin: 20px auto;
 }
 
+/* Blog Layout */
 #blog {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
   flex-wrap: wrap;
-  border-top: 1px solid #c0c0c0;
   margin-top: 40px;
   padding: 20px 0;
 }
 
 #blog article.post {
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  padding: 15px;
-  background: #fff;
-  flex: 0 1 250px;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  flex: 0 1 280px;
+  border-top: 5px solid #2d5a27;
 }
 
-article.post a, #practice a {
+article.post h3 a {
   color: #2d5a27;
-  font-weight: bold;
+  text-decoration: none;
 }
 
+/* --- Practice Elements --- */
 #practice h3 {
-  border-left: 7.5px solid #2d5a27;
-  padding: 10px;
+  border-left: 6px solid #2d5a27;
+  padding-left: 15px;
   text-align: left;
-  max-width: 600px;
-  margin: 20px auto;
+  max-width: 750px;
+  margin: 30px auto;
 }
 
-/* Tables Centered */
 table {
   width: 100%;
   max-width: 800px;
-  margin: 20px auto;
+  margin: 30px auto;
   border-collapse: collapse;
   background: #fff;
 }
@@ -160,19 +164,20 @@ table {
 th {
   background-color: #2d5a27;
   color: #ffffff;
-  padding: 10px;
+  padding: 12px;
 }
 
 td {
-  border: 1px solid #c0c0c0;
+  border: 1px solid #ddd;
   padding: 10px;
   text-align: center;
 }
 
-/* Lists Centered */
-#practice ol, #practice ul {
+/* Centering Lists */
+#practice ol, #practice ul, #practice dl {
   display: inline-block;
   text-align: left;
+  margin: 20px auto;
 }
 
 blockquote {
@@ -180,14 +185,22 @@ blockquote {
   border: 2px solid #d4af37;
   color: #fff;
   padding: 40px;
-  margin: 40px auto;
-  max-width: 700px;
-  border-radius: 20px;
+  margin: 50px auto;
+  max-width: 750px;
+  font-style: italic;
 }
 
-aside[aria-label="sidebar"] {
+blockquote cite {
+  display: block;
+  margin-top: 15px;
+  color: #d4af37;
+  font-size: 0.9rem;
+}
+
+/* --- Sidebar & Widgets --- */
+aside[aria-label="Sidebar"] {
   background-color: #132219;
-  padding: 40px 0;
+  padding: 50px 0;
   color: #ffffff;
 }
 
@@ -195,17 +208,27 @@ aside .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
 }
 
+.widget {
+  max-width: 400px;
+}
+
+.widget a {
+  color: #d4af37;
+}
+
+/* --- Footer --- */
 footer.primary {
  background-color: #0d1a12;
- padding: 20px;
+ padding: 30px;
  color: #d4af37;
- border-top: 2px solid #d4af37;
+ border-top: 4px solid #d4af37;
 }
 
-@media screen and (max-width:500px) {
+/* Responsive */
+@media screen and (max-width:600px) {
   nav.primary ul { flex-direction: column; align-items: center; }
-  .img-center { max-width: 80%; }
+  header.primary h1 a { font-size: 1.8rem; }
 }
