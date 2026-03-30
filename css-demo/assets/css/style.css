@@ -17,33 +17,36 @@ img {
 /* --------------Utility Classes ---------------- */
 .container {
   max-width: 960px;
-  width: 90vw;
-  margin: 0 auto; /* Centers the container block */
-  text-align: center; /* Centers all inline and text elements inside */
+  width: 80vw;
+  margin: 40px auto;
+  text-align: center; /* Centers text and inline elements */
 }
 
 .img-center {
   display: block;
-  margin: 30px auto;
-  border: 2px solid #2d5a27;
+  margin: 20px auto;
+  border: 1px solid #d4af37;
   padding: 10px;
-  max-width: 60%;
+  max-width: 33%;
 }
 
 /* Skip link utility */
-.visually-hidden:focus,
-.visually-hidden:focus-visible {
-  clip: auto;
-  height: auto;
-  width: auto;
-  padding: 10px 14px;
+.visually-hidden {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%); /* Centered skip link */
-  top: 10px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+}
+
+.visually-hidden:focus {
+  position: relative;
+  width: auto;
+  height: auto;
+  clip: auto;
   background: #d4af37;
   color: #0d1a12;
-  z-index: 9999;
+  padding: 10px;
 }
 
 /* ------------------ Global Styles --------------------- */
@@ -52,52 +55,35 @@ body {
   font-family: "Rubik", sans-serif;
   margin: 0;
   background-color: #f4f7f4;
-  color: #595e46;
-  line-height: 1.8;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Ensures body children stay centered */
-}
-
-/* Make sections span full width while centering content */
-header, nav, main, aside, footer, section {
-  width: 100%;
+  color: #2c3e50;
+  text-align: center; /* Global centering */
 }
 
 header.primary {
-  background-color: #4d5550;
-  color: #d4af37;
-  text-align: center;
-  padding: 100px 20px;
+  background-color: #0d1a12;
+  color: #ffffff;
+  padding: 60px 20px;
   border-bottom: 4px solid #d4af37;
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 30L60 0H0L30 30z' fill='%23d4af37' fill-opacity='0.03'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d4af37' fill-opacity='0.05'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/svg%3E");
 }
 
-/* Metallic Gold "Building the Modern Web" */
+/* Building the Modern Web - Gold Fix */
 header.primary h1 {
-  font-size: 3.5rem;
-  margin: 0 auto;
+  font-size: 2.4rem;
+  margin: 0;
+  color: #d4af37;
   text-transform: uppercase;
-  letter-spacing: 5px;
-  font-weight: 900;
-  display: inline-block;
-  background: linear-gradient(to bottom, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
-  background-clip: text;
-  filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.5));
+  letter-spacing: 2px;
 }
 
 header.primary p.subtitle {
-  font-size: 1.1rem;
-  margin: 20px auto;
+  font-size: 1.3rem;
+  margin: 10px 0 20px;
   color: #fdfdfd;
-  letter-spacing: 3px;
-  max-width: 600px;
 }
 
-/* --- Navigation Centering --- */
 nav.primary ul {
   padding: 0;
-  margin: 0 auto;
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -105,5 +91,121 @@ nav.primary ul {
 }
 
 nav.primary ul li a {
-  background-color: transparent;
-  padding: 10px 2
+  background-color: rgba(212, 175, 55, 0.1);
+  padding: 8px 15px;
+  border: 1px solid #d4af37;
+  border-radius: 8px;
+  color: #d4af37;
+  text-decoration: none;
+  transition: .3s;
+}
+
+nav.primary ul li a:hover {
+   background-color: #d4af37;
+   color: #0d1a12;
+}
+
+#content h2, #practice h2 {
+  color: #2d5a27;
+  border-bottom: 1px dashed #d4af37;
+  display: inline-block;
+  margin-top: 40px;
+}
+
+#content p {
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+#blog {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  border-top: 1px solid #c0c0c0;
+  margin-top: 40px;
+  padding: 20px 0;
+}
+
+#blog article.post {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 15px;
+  background: #fff;
+  flex: 0 1 250px;
+}
+
+article.post a, #practice a {
+  color: #2d5a27;
+  font-weight: bold;
+}
+
+#practice h3 {
+  border-left: 7.5px solid #2d5a27;
+  padding: 10px;
+  text-align: left;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+/* Tables Centered */
+table {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+th {
+  background-color: #2d5a27;
+  color: #ffffff;
+  padding: 10px;
+}
+
+td {
+  border: 1px solid #c0c0c0;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Lists Centered */
+#practice ol, #practice ul {
+  display: inline-block;
+  text-align: left;
+}
+
+blockquote {
+  background-color: #0d1a12;
+  border: 2px solid #d4af37;
+  color: #fff;
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 700px;
+  border-radius: 20px;
+}
+
+aside[aria-label="sidebar"] {
+  background-color: #132219;
+  padding: 40px 0;
+  color: #ffffff;
+}
+
+aside .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+footer.primary {
+ background-color: #0d1a12;
+ padding: 20px;
+ color: #d4af37;
+ border-top: 2px solid #d4af37;
+}
+
+@media screen and (max-width:500px) {
+  nav.primary ul { flex-direction: column; align-items: center; }
+  .img-center { max-width: 80%; }
+}
