@@ -9,353 +9,101 @@ html {
 }
 
 /* --------------Responsive Images ---------------- */
-
-img{
-  max-width:100%;
+img {
+  max-width: 100%;
+  height: auto;
 } 
+
 /* --------------Utility Classes ---------------- */
-
-.container{
-  max-width:960px;
-  width:80vw;
-  margin: 20px auto;
+.container {
+  max-width: 960px;
+  width: 90vw;
+  margin: 0 auto; /* Centers the container block */
+  text-align: center; /* Centers all inline and text elements inside */
 }
 
-.img-right{
-  float:right;
-  margin:10px 0 10px 20px;
-  border:1px solid #c0c0c0;
-  padding:10px;
-  max-width:33%;
+.img-center {
+  display: block;
+  margin: 30px auto;
+  border: 2px solid #2d5a27;
+  padding: 10px;
+  max-width: 60%;
 }
 
-.img-left{
-  float:left;
-  margin:10px 20px 10px 0;
-  border:1px solid #c0c0c0;
-  padding:10px;
-  max-width:33%;
-}
-
-.img-center{
-  display:block;
-  margin:20px auto;
-  border:1px solid #c0c0c0;
-  padding:10px;
-  max-width:33%;
-}
-
-
-/* Skip link utility: hidden until focused */
-.visually-hidden {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
-/* Make skip link visible when keyboard users tab to it */
+/* Skip link utility */
 .visually-hidden:focus,
 .visually-hidden:focus-visible {
   clip: auto;
   height: auto;
   width: auto;
-  margin: 0;
   padding: 10px 14px;
   position: absolute;
-  left: 10px;
+  left: 50%;
+  transform: translateX(-50%); /* Centered skip link */
   top: 10px;
-  background: #ffffff;
-  color: #172635;
+  background: #d4af37;
+  color: #0d1a12;
   z-index: 9999;
-  border-radius: 6px;
 }
 
 /* ------------------ Global Styles --------------------- */
 
 body {
   font-family: "Rubik", sans-serif;
-  margin:0;
+  margin: 0;
+  background-color: #f4f7f4;
+  color: #595e46;
+  line-height: 1.8;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Ensures body children stay centered */
 }
 
-header.primary{
-  background-color:#3b6b8b;
-  color:#ffffff;
-  text-align:center;
-  text-shadow:2px 2px #000000;
-  /* Longform */
-  padding-top:40px;
-  padding-right:40px;
-  padding-bottom:40px;
-  padding-left:40px;
-  /* Single Value */
-  padding:40px;
-  /* T/R/B/L */
-  padding: 40px 40px 20px 40px;
-  /* T/B | L/R */
-  padding: 20px 40px;
-
-background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.2'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-}
-
-header.primary a{
-  color:#ffffff;
-  text-decoration:none;
-}
-
-header.primary h1{
-  font-size:2.4rem;
-  margin:0;
-}
-
-header.primary p.subtitle{
-  font-size:1.3rem;
-  margin:10px 0 20px;
-  letter-spacing:.2px;
-}
-
-nav.primary ul{
-  padding:0;
-  display:flex;
-  flex-direction:row;
-  justify-content:space-around;
-  gap:30px;
-}
-
-nav.primary ul li{
-  list-style-type:none;
-  flex:1;
-}
-
-nav.primary ul li a{
-  background-color:rgba(0,0,0,.4);
-  padding: 5px 7.5px;
-  border: 1px solid #000000;
-  border-radius: 8px;
-  transition: .5s;
-  display:block;
-}
-
-nav.primary ul li a:hover{
-   background-color:rgba(0,0,0,.8);
-}
-
-#content h2, #practice h2{
-  color:#3b638b;
-  border-bottom:1px dashed #c0c0c0;
-}
-
-#content p{
-  line-height:1.6;
-}
-
-#blog{
-  display:flex;
-  flex-direction:row;
-  justify-content:space-between;
-  gap:20px;
-  flex-wrap:wrap;
-  border-top: 1px solid #c0c0c0;
-  margin-top:10px;
-  border-bottom: 1px solid #c0c0c0;
-  padding-bottom:20px;
-}
-
-figure{
-  margin:0;
-}
-
-#blog article.post{
-  box-shadow:0 4px 8px rgba(0,0,0,.6);
-  padding:10px;
-  font-size: .8rem;
-  flex:1;
-}
-
-h2#recent-posts{
-  flex:0 0 100%;
-}
-
-
-
-
-article.post time, article.post figcaption{
- text-transform: uppercase;
- font-size: .6rem;
-}
-
-article.post a{
-color:#3b638b;
-}
-
-#practice a{
- color:#3b638b;
-}
-
-#practice a:hover{
-  text-decoration:none;
-}
-
-#practice h3{
-  border-left:7.5px solid #3b638b;
-  padding: 10px 0 10px 10px;
-}
-
-table{
-  width:100%;
-  border:1px solid #c0c0c0;
-  border-collapse:collapse;
-}
-caption{
-  font-weight:bold;
-  margin:10px;
-  
-}
-td{
-    border:1px solid #c0c0c0;
-   padding:5px;
-}
-tr:nth-child(even){
-  background-color:rgba(0,0,0,.1);
-}
-
-tr:hover{
-  background-color:rgba(0,0,0,.25);
-}
-
-td:nth-child(n+2){
-  text-align:right;
-}
-
-th{
-  background-color:#3b638b;
-  color:#ffffff;
-  text-shadow: 2px 2px #000;
-  padding:10px;
-}
-
-#practice ol{
-  list-style-type:lower-roman;
-}
-
-#practice ul ul{
-  color:red;
-}
-
-#practice dt{
-  font-weight:bold;
-}
-
-dd + dt{
-  margin-top:20px;
-  color:red;
-}
-
-blockquote{
-  background-color:#172635;
-  border:4px double #c0c0c0;
-  color:#fff;
-  padding: 40px;
-  border-radius: 20px 60px;
-}
-
-blockquote cite{
-  display:block;
-  margin-top:20px;
-  text-align:right;
-  font-size:.8rem;
-}
-
-
-#practice dd{
-  margin-left:0;
-}
-
-
-aside[aria-label="sidebar"] {
-  background-color:#172635;
-  padding:40px 0;
-  color:#ffffff;
-}
-
-aside .container{
-  display:flex;
-  flex-direction:row;
-  justify-content:space-evenly;
-  gap:40px;
-}
-
-aside .container a{
-  color:#ffffff;
-}
-
-aside .container a:last-child{
-  display:block;
-  text-align:right;
-  margin-top:20px;
-}
-
-aside .widget{
-  flex:1;
-}
-
-aside footer{
-  display:none;
-}
-
-footer.primary{
- background-color:#3b638b;
- padding:5px;
- color:#fff;
- text-align:center;
- text-shadow:1px 1px #000000;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Media Queries */
-
-@media screen and (max-width:500px) {
-  
-
-  
-nav.primary ul{
-  flex-direction:column;
-  justify-content:space-around;
-  gap:15px;
-}
-  
-nav.primary ul li{
+/* Make sections span full width while centering content */
+header, nav, main, aside, footer, section {
   width: 100%;
-}  
-  
-nav.primary a{
-    display:block;
-  }  
-  
-  
 }
+
+header.primary {
+  background-color: #4d5550;
+  color: #d4af37;
+  text-align: center;
+  padding: 100px 20px;
+  border-bottom: 4px solid #d4af37;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 30L60 0H0L30 30z' fill='%23d4af37' fill-opacity='0.03'/%3E%3C/svg%3E");
+}
+
+/* Metallic Gold "Building the Modern Web" */
+header.primary h1 {
+  font-size: 3.5rem;
+  margin: 0 auto;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 900;
+  display: inline-block;
+  background: linear-gradient(to bottom, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+  background-clip: text;
+  filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.5));
+}
+
+header.primary p.subtitle {
+  font-size: 1.1rem;
+  margin: 20px auto;
+  color: #fdfdfd;
+  letter-spacing: 3px;
+  max-width: 600px;
+}
+
+/* --- Navigation Centering --- */
+nav.primary ul {
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+}
+
+nav.primary ul li a {
+  background-color: transparent;
+  padding: 10px 2
