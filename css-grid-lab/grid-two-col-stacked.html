@@ -1,71 +1,120 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid Demo - Two Col Stacked</title>
+    <style>
+      /* ---------------Box Sizing-----------------  */
+      html {
+        box-sizing: border-box;
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSS Grid Demo</title>
-  <style>
-    /*  ---------------Box Sizing-----------------  */
-    html {
-      box-sizing: border-box;
-    }
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
 
-    *,
-    *:before,
-    *:after {
-      box-sizing: inherit;
-    }
+      /* Starter Styles */
+      main > * {
+        font-family:
+          Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro, sans-serif;
+        font-weight: normal;
+        background-color: #c0c0c0;
+        border-radius: 10px;
+        padding: 20px;
+      }
 
-    /* Starter */
-    main>* {
-      font-family: Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro,
-        sans-serif;
-      font-weight: normal;
-      background-color: #c0c0c0;
-      border-radius: 10px;
-      padding: 20px;
-    }
+      main {
+        display: grid;
+        gap: 20px;
+        max-width: 80vw;
+        margin: 20px auto;
+      }
 
-    main {
-      display: grid;
-      gap: 20px;
-      max-width: 80vw;
-      margin: 20px auto;
-    }
-  </style>
+      .grid-two-col-equal {
+        /* Create two equal columns */
+        grid-template-columns: 1fr 1fr;
+      }
 
-</head>
+      /* Make Header and Footer span across both columns */
+      .primary {
+        grid-column: 1 / -1;
+      }
 
-<body>
-  <main>
-    <header class="primary">
-      <h1>Site Header</h1>
-    </header>
-    <section id="content">
-      <header>
-        <h2>#Content Section Header</h2>
+      /* The left section (#content) spans two rows high */
+      .grid-two-col-equal #content {
+        grid-column: 1;
+        grid-row: 2 / span 2;
+      }
+
+      /* The blog and aside naturally stack in column 2 */
+      .grid-two-col-equal #blog,
+      .grid-two-col-equal aside {
+        grid-column: 2;
+      }
+
+      /* --- OTHER LAYOUT CLASSES (FOR REFERENCE) --- */
+
+      .grid-two-col-left {
+        grid-template-columns: 2fr 1fr;
+      }
+      .grid-two-col-right {
+        grid-template-columns: 1fr 2fr;
+      }
+      .grid-two-col-stacked {
+        grid-template-columns: 1fr;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="grid-two-col-equal">
+      <header class="primary">
+        <h1>Site Header</h1>
       </header>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus expedita repellendus aliquid iusto consectetur ut velit totam explicabo magnam. Culpa non suscipit doloribus corporis neque.</p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos inventore quo exercitationem temporibus magni deserunt, quasi repellendus reiciendis? Quos, facere doloribus optio quasi numquam dolore!</p>
-      <footer>Section Footer</footer>
-    </section>
-    <section id="blog">
-      <header>
-        <h2>#Blog Section Header</h2>
-      </header>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus expedita repellendus aliquid iusto consectetur ut velit totam explicabo magnam. Culpa non suscipit doloribus corporis neque.</p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos inventore quo exercitationem temporibus magni deserunt, quasi repellendus reiciendis? Quos, facere doloribus optio quasi numquam dolore!</p>
-      <footer>Section Footer</footer>
-    </section>
-    <aside>
-      <h2>Aside</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non eaque dolorum sequi velit molestiae ratione ducimus ipsum excepturi atque.</p>
-    </aside>
-    <footer class="primary">Site Footer</footer>
-  </main>
-</body>
 
+      <section id="content">
+        <header>
+          <h2>#Content Section Header</h2>
+        </header>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
+          expedita repellendus aliquid iusto consectetur ut velit totam
+          explicabo magnam. Culpa non suscipit doloribus corporis neque.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+          inventore quo exercitationem temporibus magni deserunt, quasi
+          repellendus reiciendis? Quos, facere doloribus optio quasi numquam
+          dolore!
+        </p>
+        <footer>Section Footer</footer>
+      </section>
+
+      <section id="blog">
+        <header>
+          <h2>#Blog Section Header</h2>
+        </header>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
+          expedita repellendus aliquid iusto consectetur ut velit totam
+          explicabo magnam. Culpa non suscipit doloribus corporis neque.
+        </p>
+        <footer>Section Footer</footer>
+      </section>
+
+      <aside>
+        <h2>Aside</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non
+          eaque dolorum sequi velit molestiae ratione ducimus ipsum excepturi
+          atque.
+        </p>
+      </aside>
+
+      <footer class="primary">Site Footer</footer>
+    </main>
+  </body>
 </html>

@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSS Grid Demo</title>
+  <title>CSS Grid Demo - Two Col Equal</title>
   <style>
-    /*  ---------------Box Sizing-----------------  */
+    /* ---------------Box Sizing-----------------  */
     html {
       box-sizing: border-box;
     }
@@ -17,7 +17,7 @@
       box-sizing: inherit;
     }
 
-    /* Starter */
+    /* Starter Styles */
     main>* {
       font-family: Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro,
         sans-serif;
@@ -33,37 +33,64 @@
       max-width: 80vw;
       margin: 20px auto;
     }
-  </style>
 
+    .grid-two-col-equal {
+      /* Create two equal columns */
+      grid-template-columns: 1fr 1fr;
+    }
+
+    /* Site Header, Site Footer, AND the Aside across both columns */
+    .primary, 
+    .grid-two-col-equal aside {
+      grid-column: 1 / -1;
+    }
+
+    /* The two sections naturally fill the two equal columns in the middle row */
+    .grid-two-col-equal #content {
+      grid-column: 1;
+    }
+
+    .grid-two-col-equal #blog {
+      grid-column: 2;
+    }
+
+    /* --- OTHER LAYOUT CLASSES --- */
+    .grid-two-col-left { grid-template-columns: 2fr 1fr; }
+    .grid-two-col-right { grid-template-columns: 1fr 2fr; }
+    .grid-two-col-stacked { grid-template-columns: 1fr; }
+
+  </style>
 </head>
 
 <body>
-  <main>
+  <main class="grid-two-col-equal">
     <header class="primary">
       <h1>Site Header</h1>
     </header>
+
     <section id="content">
       <header>
         <h2>#Content Section Header</h2>
       </header>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus expedita repellendus aliquid iusto consectetur ut velit totam explicabo magnam. Culpa non suscipit doloribus corporis neque.</p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos inventore quo exercitationem temporibus magni deserunt, quasi repellendus reiciendis? Quos, facere doloribus optio quasi numquam dolore!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos inventore quo exercitationem temporibus magni deserunt, quasi repellendus reiciendis? Quos, facere doloribus optio quasi numquam dolore!</p>
       <footer>Section Footer</footer>
     </section>
+
     <section id="blog">
       <header>
         <h2>#Blog Section Header</h2>
       </header>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus expedita repellendus aliquid iusto consectetur ut velit totam explicabo magnam. Culpa non suscipit doloribus corporis neque.</p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos inventore quo exercitationem temporibus magni deserunt, quasi repellendus reiciendis? Quos, facere doloribus optio quasi numquam dolore!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos inventore quo exercitationem temporibus magni deserunt, quasi repellendus reiciendis? Quos, facere doloribus optio quasi numquam dolore!</p>
       <footer>Section Footer</footer>
     </section>
+
     <aside>
       <h2>Aside</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non eaque dolorum sequi velit molestiae ratione ducimus ipsum excepturi atque.</p>
     </aside>
+
     <footer class="primary">Site Footer</footer>
   </main>
 </body>
