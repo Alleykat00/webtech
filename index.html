@@ -1,40 +1,104 @@
 <!doctype html>
-
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IFSC 1310 | Alex Rancifer</title>
+    <meta
+      name="description"
+      content="Assignment portfolio for IFSC 1310 coursework."
+    />
+    <meta name="author" content="Alex Rancifer" />
 
-<head>
-  <meta charset="utf-8">
+    <!-- Linking to your separate CSS file -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+  </head>
 
-  <title>IFSC 1310 | Alex Rancifer</title>
-  <meta name="description" content="Keyword Rich Description">
-  <meta name="author" content="Alex Rancifer">
-  <link href="assets/css/style.css" rel="stylesheet" />
-</head>
+  <body>
+    <header>
+      <h1>Alex Rancifer</h1>
+      <p>IFSC 1310 Coursework Portfolio</p>
+    </header>
 
-<body>
-  <h1>Alex Rancifer</h1>
-  <nav>
-    <ul>
-      <li><a href="prototype/index.html">First Assignment</a></li>
-      <li><a href="css-demo/index.html">CSS Demo Assignment</a></li>
-      <li><a href="assets/img/frog.png">Flexbox Froggy Assignment </a></li>
-      <li><a href="assets/img/grid-garden.png">CSS Garden Assignment</a></li>
-      <li>Positioning Exercise</a></li>
-      <ul>
-        <li><a href="positioning-excercise/float1.html">Float Exercise 1</a></li>
-        <li><a href="positioning-excercise/float2.html">Float Exercise 2</a></li>
-        <li><a href="positioning-excercise/absolute1.html">Absolute Exercise 1</a></li>
-        <li><a href="positioning-excercise/absolute2.html">Absolute Exercise 2</a></li>
-      </ul>
-      <li>CSS-Grid-Lab</a></li>
-      <ul>
-        <li><a href="css-grid-lab/grid-two-col-left.html">*Grid Exercise Left</a></li>
-        <li><a href="css-grid-lab/grid-two-col-right.html">**Grid Exercise Right</a></li>
-        <li><a href="css-grid-lab/grid-two-col-stacked.html">***Grid Exercise Stacked</a></li>
-        <li><a href="css-grid-lab/grid-two-col-equal.html">****Grid Exercise Equal</a></li>
-        <li><a href="mars-rover/index.html">Mars Rover Assignment</a></li>
+    <main class="container">
+      <!-- Block 1: Core Projects -->
+      <section>
+        <h2>Core Projects</h2>
+        <nav>
+          <ul>
+            <li><a href="prototype/index.html">First Assignment</a></li>
+            <li><a href="css-demo/index.html">CSS Demo Assignment</a></li>
+            <li><a href="mars-rovers/index.html">Mars Rover Assignment</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <!-- Block 2: Screenshots (Special Class) -->
+      <section class="screenshot-block">
+        <h2>Screenshots</h2>
+        <ul>
+          <li><a href="assets/img/frog.png">Flexbox Froggy</a></li>
+          <li><a href="assets/img/grid-garden.png">CSS Garden</a></li>
         </ul>
-  </nav>
-</body>
+      </section>
 
+      <!-- Block 3: Positioning Exercises -->
+      <section>
+        <h2>Positioning</h2>
+        <ul>
+          <li>
+            <strong>Floats</strong>
+            <ul class="sub-list">
+              <li>
+                <a href="positioning-excercise/float1.html">Float Exercise 1</a>
+              </li>
+              <li>
+                <a href="positioning-excercise/float2.html">Float Exercise 2</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Absolute</strong>
+            <ul class="sub-list">
+              <li>
+                <a href="positioning-excercise/absolute1.html"
+                  >Absolute Exercise 1</a
+                >
+              </li>
+              <li>
+                <a href="positioning-excercise/absolute2.html"
+                  >Absolute Exercise 2</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Block 4: CSS Grid Lab -->
+      <section>
+        <h2>CSS Grid Lab</h2>
+        <ul>
+          <li>
+            <a href="css-grid-lab/grid-two-col-left.html">Grid Exercise Left</a>
+          </li>
+          <li>
+            <a href="css-grid-lab/grid-two-col-right.html"
+              >Grid Exercise Right</a
+            >
+          </li>
+          <li>
+            <a href="css-grid-lab/grid-two-col-stacked.html"
+              >Grid Exercise Stacked</a
+            >
+          </li>
+          <li>
+            <a href="css-grid-lab/grid-two-col-equal.html"
+              >Grid Exercise Equal</a
+            >
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
 </html>
