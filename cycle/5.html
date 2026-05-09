@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="Jquery,Demonstration, Cycle Plugin" />
+<meta name="description" content="This is a teaching demonstartion" />
+<meta name="author" content="Thomas Wallace" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Jquery Cycle Examples</title>
+<link href="assets/style/screen.css" rel="stylesheet" type="text/css" />
+<!-- include jQuery library via Google CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<!-- include Cycle plugin -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle/3.0.3/jquery.cycle.all.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('.gallery').cycle({
+		fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+	});
+});
+</script>
+
+</head>
+
+<body>
+<h2>Photo Gallery</h2>
+<div class="gallery"><!-- Beggining of the Photo Gallery--> 
+  <img src="assets/images/1.jpg" width="500" height="317" alt="Wakeboarding" /> 	
+  <img src="assets/images/2.jpg" width="500" height="317" alt="Wakeboarding" /> 
+  <img src="assets/images/3.jpg" width="500" height="317" alt="Wakeboarding" /> 
+  <img src="assets/images/4.jpg" width="500" height="317" alt="Wakeboarding" /> 
+  <img src="assets/images/5.jpg" width="500" height="317" alt="Wakeboarding" /> 
+</div><!--.gallery -->
+
+<h2>Quote Rotator</h2>
+<div class="quotes"><!-- Beggining of the Quotes--> 
+  <blockquote>
+    <p>Good design is all about making other designers feel like idiots because that  idea wasn&rsquo;t theirs <br />
+      - Frank Chimero</p>
+  </blockquote>
+  <blockquote>
+    <p>Design is easy. All you do is stare at the screen until drops of blood  form on  your forehead <br />
+      - Marty Neumier</p>
+  </blockquote>
+  <blockquote>
+    <p>Every child is an artist. The challenge is to remain an artist after you grow up - Pablo Picasso</p>
+  </blockquote><!--.quotes -->
+</div>
+<h2>News Ticker</h2>
+<ul class="ticker"><!-- Just added a class to parent element. In this case the ul -->
+  <li><a href="http://www.npr.org/2011/04/19/135518927/libyan-rebels-look-for-ways-to-fill-coffers">Libyan Rebels Look For Ways To Fill Coffers</a></li>
+  <li><a href="http://www.npr.org/2011/04/19/135443369/hiring-may-ease-violence-at-calif-mental-hospital">Changes Sought After Death At Calif. Mental Hospital</a></li>
+  <li><a href="http://www.npr.org/blogs/itsallpolitics/2011/04/19/135523376/williamn-donald-schaefer-maryland-political-legend-dead-at-89">Md. Political Legend William Donald Schaefer Dies</a></li>
+  <li><a href="http://www.npr.org/blogs/money/2011/04/19/135508506/todays-big-warning-on-u-s-debt">Standard And Poor's Warns: Fix Deficit, Or Else</a></li>
+  <li><a href="http://www.npr.org/2011/04/18/135527312/arizona-governor-vetoes-presidential-birther-bill">Arizona Governor Vetoes 'Birther' Bill</a></li>
+  <li><a href="http://www.npr.org/2011/04/18/135517029/in-wisconsin-efforts-to-recall-senators-gain-steam">Efforts To Recall Wisconsin Senators Gain Steam</a></li>
+  <li><a href="http://www.npr.org/blogs/thetwo-way/2011/04/18/135517756/pulitzers-l-a-times-gets-top-journalism-prize-jennifer-egan-wins-for-fiction">Pulitzers: L.A. Times Gets Top Journalism Prize</a></li>
+</ul>
+</body>
+</html>

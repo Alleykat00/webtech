@@ -1,0 +1,39 @@
+.gallery img {
+	display: block;
+	margin: 20px;
+}
+.gallery {
+	height: 357px;
+	width: 540px;
+	margin-right: auto;
+	margin-left: auto;
+	overflow: hidden;
+	background-color: #EDEDED;
+	border: 1px solid #CCC;
+}
+.quotes blockquote {
+	background-color: #EDEDED;
+	padding: 20px;
+	border: 1px solid #CCC;
+	margin-top: -10px;
+	margin-bottom: 20px;
+}
+body {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	height: 50px;
+}
+.ticker {
+	list-style-type: none;
+	margin: 0px;
+	padding: 20px;
+	background-color: #EDEDED;
+	border: 1px solid #CCC;
+	width: 400px;
+}
+.ticker li a {
+	display: block;
+	line-height: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 20px;
+}

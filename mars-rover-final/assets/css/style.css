@@ -1,0 +1,172 @@
+/* 1. IMPORTS & VARIABLES */
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@700&family=Lato:wght@400;700&display=swap');
+
+:root {
+    --nasa-blue: #0b3d91;
+    --deep-space: #050a0f;
+    --silver-metallic: #C0C0C0;
+    --platinum: #E5E4E2;
+    --border-silver: #848482;
+    --overlay-alpha: rgba(5, 10, 15, 0.75); /* Dark transparency layer */
+}
+
+/* 2. BASE LAYOUT & BACKGROUND */
+body {
+    font-family: 'Lato', sans-serif;
+    /* Background image to the whole page */
+    background-image: linear-gradient(var(--overlay-alpha), var(--overlay-alpha)), url('../images/background.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: var(--deep-space);
+    
+    color: var(--platinum);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* 3. ACCESSIBILITY */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background: var(--nasa-blue);
+    color: white;
+    padding: 10px;
+    z-index: 100;
+}
+.skip-link:focus { top: 0; }
+
+/* 4. HEADER & NAVIGATION */
+header.primary {
+    background: linear-gradient(to bottom, rgba(11, 61, 145, 0.9), rgba(0, 0, 0, 0.9));
+    border-bottom: 2px solid var(--silver-metallic);
+    padding: 2rem 5%;
+    text-align: center;
+}
+
+header.primary h1 a {
+    font-family: 'Goldman', cursive;
+    color: var(--silver-metallic);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+header.primary h2 {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: var(--platinum);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+nav a {
+    color: var(--silver-metallic);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover, nav a:focus {
+    color: white;
+    text-decoration: underline;
+}
+
+/* 5. CONTENT CONTAINERS */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.content-box {
+    background: rgba(255, 255, 255, 0.05); /* Very subtle silver tint */
+    border: 1px solid var(--border-silver);
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    backdrop-filter: blur(8px); /* Modern frosted-glass effect */
+}
+
+h2 {
+    font-family: 'Goldman', cursive;
+    color: var(--silver-metallic);
+    border-bottom: 2px solid var(--nasa-blue);
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+/* 6. GRID & ARTICLES */
+.rover-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.post {
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid var(--border-silver);
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+    border-color: var(--nasa-blue);
+}
+
+.post img {
+    width: 100%;
+    height: auto;
+    border-bottom: 3px solid var(--nasa-blue);
+}
+
+/* 7. TABLES (Bonus Feature) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+th, td {
+    border: 1px solid var(--border-silver);
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--nasa-blue);
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+/* 8. FOOTER */
+#colophon {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 50px 5%;
+    text-align: center;
+    border-top: 2px solid var(--silver-metallic);
+    margin-top: 60px;
+}
+
+#colophon a {
+    color: var(--silver-metallic);
+    text-decoration: none;
+}
+
+#colophon a:hover {
+    color: white;
+}
